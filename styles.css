@@ -2,32 +2,37 @@ body {
     background-color: #0c3c3c; /* Dark green background */
     color: #fff; /* White text color */
     font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .input-wrapper {
-    position: absolute;
-    top: 10px;
-    left: 10px;
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    padding: 15px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    text-align: center;
 }
 
 input[type="text"] {
     border: 2px solid #007b33; /* Dark green border */
-    border-radius: 3px;
-    padding: 5px;
-    margin-right: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px; /* Larger font size */
 }
 
 button {
     background-color: #d60000; /* Christmas red background */
     color: white;
     border: none;
-    padding: 6px 12px;
-    border-radius: 3px;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px; /* Larger font size */
     transition: background-color 0.3s ease;
 }
 
