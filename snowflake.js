@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    console.log("Snowflakes script loaded");
     var canvas = document.createElement('canvas');
     document.body.appendChild(canvas);
     var ctx = canvas.getContext('2d');
