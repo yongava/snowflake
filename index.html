@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snowflake Animation</title>
-    <style>
-        body {
-            background-color: green;
-            margin: 0;
-            height: 100vh;
-            overflow: hidden;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <script src="snowflake.js"></script>
+<script src="snowflake.js"></script>
+<div class="input-wrapper">
+    <input type="text" id="nameInput" placeholder="Enter your name" list="nameSuggestions"/>
+    <datalist id="nameSuggestions">
+        <!-- The options will be populated by JavaScript -->
+    </datalist>
+    <button id="registerButton">Register</button>
+</div>
 </body>
 </html>

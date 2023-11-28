@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var suggestedNames = ['Alice', 'Bob', 'Charlie', 'Diana']; // Add more names as required
+        var dataList = document.getElementById('nameSuggestions');
+
+        suggestedNames.forEach(function(name) {
+            var option = document.createElement('option');
+            option.value = name;
+            dataList.appendChild(option);
+        });
+
+        var registerButton = document.getElementById('registerButton');
+        registerButton.addEventListener('click', function() {
+            var name = document.getElementById('nameInput').value;
+            console.log('Registered Name:', name); // Here you can handle the registration logic
+            // For example, sending the name to a server or storing it in local storage
+        });
+    });
+
     console.log("Snowflakes script loaded");
     var canvas = document.createElement('canvas');
     document.body.appendChild(canvas);
