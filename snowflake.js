@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    var numberOfSnowflakes = 50;
+    var numberOfSnowflakes = 100;
     var snowflakes = [];
 
     for (var i = 0; i < numberOfSnowflakes; i++) {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var snowflake = snowflakes[i];
 
             // Speed is inversely proportional to the radius (smaller snowflakes fall faster)
-            var speed = (3 - snowflake.radius) / 2; // Adjust the denominator to control max speed
+            var speed = (4 - snowflake.radius) / 2; // Adjust the denominator to control max speed
 
             snowflake.y += speed;
             if (snowflake.y > canvas.height) {
