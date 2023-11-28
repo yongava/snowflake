@@ -31,18 +31,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function moveSnowflakes() {
-        for (var i = 0; i < numberOfSnowflakes; i++) {
-            var snowflake = snowflakes[i];
+    for (var i = 0; i < numberOfSnowflakes; i++) {
+        var snowflake = snowflakes[i];
 
-            // Speed is inversely proportional to the radius (smaller snowflakes fall faster)
-            var speed = (4 - snowflake.radius) / 2; // Adjust the denominator to control max speed
+        // Ensure speed is positive so snowflakes always fall downwards
+        var speed = Math.abs((4 - snowflake.radius) / 2); // Adjust for desired speed
 
-            snowflake.y += speed;
-            if (snowflake.y > canvas.height) {
-                snowflakes[i] = { x: Math.random() * canvas.width, y: 0, radius: snowflake.radius, density: snowflake.density };
-            }
+        // Add horizontal movement
+        var wind = Math.sin(Date.now() / 1000) * 0.5; // Change 0.5 to adjust the strength of the wind effect
+
+        // Update position
+        snowflake.y += speed;
+        snowflake.x += wind;
+
+        // Respawn snowflake at top if it goes below the screen or drifts too far horizontally
+        if (snowflake.y > canvas.height || snowflake.x > canvas.width || snowflake.x < 0) {
+            snowflakes[i] = { x: Math.random() * canvas.width, y: 0, radius: snowflake.radius, density: snowflake.density };
         }
     }
+}
+
 
 
     function updateSnowflakes() {
